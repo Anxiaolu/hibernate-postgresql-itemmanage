@@ -1,0 +1,4 @@
+# hibernate-postgresql-itemmanage
+一个用hibernate和postgresql来制作的一个物品分类管理的小例子
+
+运行之前在数据库中建立好一个名叫categroy_items的数据库，之后在内部建立一个名叫item的表即可运行
