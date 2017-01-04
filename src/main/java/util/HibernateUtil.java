@@ -18,10 +18,6 @@ public class HibernateUtil {
 				.applySettings(config.getProperties());
 		StandardServiceRegistry ssr = ssrb.build();
 		sessionFactory = config.buildSessionFactory();
-		/*
-		 * // 创建服务注册对象 SessionFactory factory = config.buildSessionFactory();
-		 * Session session = null;
-		 */
 	}
 
 	// 获取sessionFactory
