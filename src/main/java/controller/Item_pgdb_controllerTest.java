@@ -1,23 +1,25 @@
 package controller;
 
-import javax.enterprise.context.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
+import org.junit.Test;
 
 import model.Item;
 
 @ManagedBean(name = "ItemBean")
-@ApplicationScoped
+@RequestScoped
 public class Item_pgdb_controllerTest {
 
 	private SessionFactory SessionFactory;
 	private Session session;
 	private Transaction transaction;
 
+	@Test
 	public void saveItem() {
 		// 创建配置对象
 		Configuration config = new Configuration().configure();
@@ -29,7 +31,7 @@ public class Item_pgdb_controllerTest {
 			session = factory.openSession();
 			session.beginTransaction();
 			Item item = new Item();
-			item.setName("张三");
+			item.setName("zhangsan1");
 			item.setParent_id(0);
 			item.setStock(50);
 			item.setTotal(100);

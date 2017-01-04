@@ -18,7 +18,7 @@
 				<h:inputText value="#{Item.stock}"/>
 				<h:inputText value="#{Item.total}"/>
 				<h:outputText value="存储成功！" id="selection" />
-				<h:commandButton value="储存物品" action="#{Item.saveItem}" />
+				<h:commandButton value="储存物品" action="#{IteBean.printItem}" />
 			</h:panelGrid>
 		</h:form>
 	</p:fieldset>
