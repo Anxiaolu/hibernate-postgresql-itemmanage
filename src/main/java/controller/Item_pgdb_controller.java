@@ -13,7 +13,7 @@ import model.Item;
 
 @ManagedBean(name = "ItemBean")
 @RequestScoped
-public class Item_pgdb_controllerTest {
+public class Item_pgdb_controller {
 
 	private SessionFactory SessionFactory;
 	private Session session;
@@ -31,7 +31,7 @@ public class Item_pgdb_controllerTest {
 			session = factory.openSession();
 			session.beginTransaction();
 			Item item = new Item();
-			item.setName("zhangsan1");
+			item.setName("张三03");
 			item.setParent_id(0);
 			item.setStock(50);
 			item.setTotal(100);
