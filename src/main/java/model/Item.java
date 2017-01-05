@@ -4,9 +4,6 @@ import java.io.Serializable;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
-import javax.persistence.Embeddable;
-import javax.persistence.EmbeddedId;
-import javax.persistence.Id;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -14,12 +11,10 @@ import org.hibernate.cfg.Configuration;
 
 @ManagedBean(name = "Item")
 @SessionScoped
-
 public class Item implements Serializable {
 
 	private int id;
 	private int parent_id;
-
 	private String name;
 	private int total;
 	private int stock;
@@ -81,7 +76,6 @@ public class Item implements Serializable {
 		// 创建服务注册对象
 		SessionFactory factory = config.buildSessionFactory();
 		Session session = null;
-
 		try {
 			session = factory.openSession();
 			session.beginTransaction();

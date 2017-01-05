@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:p="http://primefaces.org/ui">
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions">
 <h:head>
 	<title>物品分类测试</title>
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
@@ -12,10 +13,14 @@
 	<h1 class="ui-widget-header ui-corner-all" align="center">实验室物品分类管理</h1>
 	<p:fieldset legend="物品分类">
 		<h:form>
-			<h:panelGrid columns="2">
+			<h:panelGrid columns="1">
+				<f:facet name="heaber" styleClass="header">物品名称</f:facet>
 				<h:inputText value="#{Item.name}"/>
+				<f:facet name="heaber" styleClass="header">上级分类</f:facet>
 				<h:inputText value="#{Item.parent_id}"/>
+				<f:facet name="heaber" styleClass="header">物品库存</f:facet>
 				<h:inputText value="#{Item.stock}"/>
+				<f:facet name="heaber" styleClass="header">物品总计</f:facet>
 				<h:inputText value="#{Item.total}"/>
 				<h:outputText value="存储成功！" id="selection" />
 				<h:commandButton value="储存物品" action="#{Item.saveItem}" />

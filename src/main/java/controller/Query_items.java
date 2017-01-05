@@ -26,7 +26,7 @@ public class Query_items {
 		SessionFactory factory = config.buildSessionFactory();
 		Session session = factory.openSession();
 		session.beginTransaction();
-		Query query = session.createQuery("from item");
+		Query query = session.createNativeQuery("select * from item",Item.class);
 		List<Item> items = query.getResultList();
 		Iterator it = items.iterator();
 		while (it.hasNext()) {
